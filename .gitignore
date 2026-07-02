@@ -1,0 +1,27 @@
+# Repo-level .gitignore (project root)
+
+# Maven / build
+/target/
+/out/
+/bin/
+
+# Test and reports
+/test-output/
+/reports/
+/logs/
+
+# IDEA project files (ignore entire .idea directory by default)
+/.idea/
+/*.iml
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+
+# Eclipse project file if present
+.project
+
+# Classpath or settings folders
+/classpath/
+/settings/
+
