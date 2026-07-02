@@ -12,7 +12,7 @@ public class JSONSchemaValidation {
 	void validateJSONSchema() { // Schema validation is done to validate the data types of data in json
 		given ()
 		.when ()
-		.get("https://jsonplaceholder.typicode.com/posts")
+			.get("https://jsonplaceholder.typicode.com/posts")
 		.then()
 			.assertThat().body(JsonSchemaValidator.matchesJsonSchemaInClasspath("JSONSchema.json"));
 	}

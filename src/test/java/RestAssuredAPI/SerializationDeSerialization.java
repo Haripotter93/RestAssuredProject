@@ -12,7 +12,6 @@ public class SerializationDeSerialization {
 
 	@Test
 	void serialization() throws JsonProcessingException { // POJO to JSON conversion
-
 		User user = new User();
 		user.setId(1);
 		user.setTitle("Demo user");

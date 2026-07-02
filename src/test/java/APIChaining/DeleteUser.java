@@ -13,7 +13,7 @@ public class DeleteUser {
 		given()
 			.headers("Authorization", "Bearer " + bearerToken).pathParam("id", id)
 		.when()
-				.delete("https://gorest.co.in/public/v2/users/{id}")
+			.delete("https://gorest.co.in/public/v2/users/{id}")
 		.then()
 			.statusCode(204)
 			.log().all();

@@ -13,16 +13,15 @@ public class FileUpload {
 	//@Test
 	void singleFileUpload() {
 		File myfile = new File("C:\\Users\\hariharan.a_inapp\\Downloads\\Javascript.docx");
-
 		given()
-		.multiPart("file", myfile)
-		.contentType("multipart/form-data")
+			.multiPart("file", myfile)
+			.contentType("multipart/form-data")
 		.when()
 			.post("http://localhost:8080/uploadFile")
 		.then()
-		.statusCode (200)
-		.body("fileName", equalTo("Javascript.docx"))
-		.log().all();
+			.statusCode (200)
+			.body("fileName", equalTo("Javascript.docx"))
+			.log().all();
 	}
 	
 	//@Test
@@ -45,16 +44,15 @@ public class FileUpload {
 	@Test
 	void fileDownload() {
 		File myfile = new File("C:\\Users\\hariharan.a_inapp\\Downloads\\Javascript.docx");
-
 		given()
-		.multiPart("file", myfile)
-		.contentType("multipart/form-data")
+			.multiPart("file", myfile)
+			.contentType("multipart/form-data")
 		.when()
 			.post("http://localhost:8080/uploadFile")
 		.then()
-		.statusCode (200)
-		.body("fileName", equalTo("Javascript.docx"))
-		.log().all();
+			.statusCode (200)
+			.body("fileName", equalTo("Javascript.docx"))
+			.log().all();
 		
 		given()
 		.when()

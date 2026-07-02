@@ -40,6 +40,18 @@ public class Authentication {
 			.body("authenticated", equalTo (true))
 			.log().all();
 	}
+	
+
+	@Test
+	void testBearerTokenAuthentication() {
+		String bearerToken="ghp_24pH0Icz1PKHC1q0tLwj57AuDYmtSz2fuYKP";
+		given()
+			.headers("Authorization", "Bearer "+bearerToken)
+		.when()
+			.get("https://api.github.com/user/repos")
+		.then()
+			.statusCode (200) .log().all();
+	}
 
 
 	@Test
